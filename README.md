@@ -23,7 +23,21 @@
 - Python do not have concept of constants like in other programming languages.
 - Python is strongly typed and does not do any implicit type conversion.
 - Python has only 2 types of loops: for/while.
-- Range object (eg: range(0, 1000)) does not return list instead return a range object with minimum memory foot print and the object can be enumerated for the range.
+- Range object (eg: range(0, 1000)) does not return list instead return a range object with minimum memory foot print and the object can be enumerated for the range min and max. It is an iterable object.
 - In python we have concept of for else and while else. The else block will hit only if the for and while loop gets completed without hitting a break statement.
 - If an argument to function is decorated with * then the argument is considered as tuple and if it is decorated with ** then the argument is considered as dictionary of key value pair(similar to javascript object).
 - Python has 2 kind of variables. 1) Local variables with function scope and 2) Global variables with file scope. Python do not have block level scope similar to C# or Java, hence if a variable is declared inside a if block, then the variable should still be accessible within the function.
+- Falsy values in Python: 0, ", [], none (similar to null in other programming languages)
+
+## Data Structures
+- In Python, every object in a list can be of different type. We can also combine list of strings to list of numbers or booleans etc.
+- Lambda functions or anonymous functions are supported in Python similar to other programming languages like C#, Java
+- Comprehensions is a new concept in Python which is not available in other programming languages. Comprehensions enable to write cleaner code and it is also more performant.
+- Stacks and Queues can be implemented using list. Using list for queue may be not performant as all the items in the memory need to be moved after removal of first item. Deque module is performant.
+- Python supports tuple which is just read only list which contains sequence of objects. Tuples are immutable. That is the reason for no add or remove methods in tuple object. Tuples will be useful when you are dealing with sequence of objects and you dont want to accidentally modify the original sequence. Common braces are used for tuple.
+- Large sequence of numbers can be dealt using more efficient data structure in python called Array. They take less memory and perform little bit faster. If you are running a query in list and you see performance problem then you can use Array. Arrays are available in array module.
+- Arrays are sequence types and behave very much like lists, except that the type of objects stored in them is constrained. The type is specified at object creation time by using a type code, which is a single character. https://docs.python.org/3/library/array.html.
+- Python also support Set which is an unordered collection of unique items with no duplicates. Curly braces are used for Set. Set supports rich set of operations like union, intersection, difference etc. Set does not support retrieval of elements using index. If you want to index then list is best choice.
+- Python also supports dictionary which is just a collection of key value pairs. Only immutable types can be used as keys. Value have no restrictions.
+- If you want to work with infinite stream of data, then we may not need to store all those values in memory. It is memory inefficient. Python provides generator objects for that purpose. You can use generator expressions to create generator objects. They are iterable and in each iteration they generate or create new value. Unlike lists they don't store these values in memory. You cannot find length of these generator objects.
+- Unpacking operator can be used to unpack any iterables
