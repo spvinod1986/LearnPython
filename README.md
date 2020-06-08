@@ -41,3 +41,11 @@
 - Python also supports dictionary which is just a collection of key value pairs. Only immutable types can be used as keys. Value have no restrictions.
 - If you want to work with infinite stream of data, then we may not need to store all those values in memory. It is memory inefficient. Python provides generator objects for that purpose. You can use generator expressions to create generator objects. They are iterable and in each iteration they generate or create new value. Unlike lists they don't store these values in memory. You cannot find length of these generator objects.
 - Unpacking operator can be used to unpack any iterables
+
+## Exceptions
+- Python program will crash if exceptions are not handled
+- Exceptions can be handled by using try, except, finally block
+- Python also has concept of try, except, else, finally where the else block will be called if try completes without any exception.
+- Python provides "with" statement which can be used to automatically release external resources. The "with" statement is similar to "using" statement in other programming languages. Any object that supports context management protocol (or has __enter__ and __exit__ magic methods) then those objects can be used with "with" statement.
+- Python 3 built in exceptions can be found in python website: https://docs.python.org/3/library/exceptions.html
+- You can throw exception using "raise" keyword and you can define your own exception types as well
