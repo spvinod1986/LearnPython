@@ -74,3 +74,11 @@
 - Python provides Abstract Base Class which can declare common behavior method and contract for derived class to implement. 
 - We can implement polymorphism without even using abstract class or contract in Python. This is called duck typing. If it walks like a duck and quacks like a duck then it is a duck. No need of any contract or base class to prove that it is a duck. Because Python is a dynamically typed language.
 - If you have classes that have only data and no method or behavior then you can use namedtuple instead of class. They are called data classes. The equality operator on data classes check for equal values in data instead of memory address or references. The namedtuples are immutable.
+
+## Modules
+- You can split code to different files and each file is called a module. Module is a logically related objects like functions, classes, variables etc.
+- Compiled version of python files or modules are called pycache. These pycache files end with .pyc and will be placed under __pycache__ folder. Python compiles these modules to speed up the process of module loading. If compiled version is available, python will skip compilation step and use the compiled files. Python compares the date time of source file and cached compile file and if the source file datetime is lesser than compile file then it will use compile file. The compiled files contains python byte code.
+- Predefined directories where python will look at to find the module can be found using sys.path.
+- A package is a container for one or more modules. Package is mapped to a directory and module is mapped to a file.
+- dir() is powerfukl built in function. With this function we can get list of attributes and methods defined in an object.
+- In python, you can execute module as script similar to immediately invoked function expressions in javascript
