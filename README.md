@@ -48,4 +48,29 @@
 - Python also has concept of try, except, else, finally where the else block will be called if try completes without any exception.
 - Python provides "with" statement which can be used to automatically release external resources. The "with" statement is similar to "using" statement in other programming languages. Any object that supports context management protocol (or has __enter__ and __exit__ magic methods) then those objects can be used with "with" statement.
 - Python 3 built in exceptions can be found in python website: https://docs.python.org/3/library/exceptions.html
-- You can throw exception using "raise" keyword and you can define your own exception types as well
+- You can throw exception using "raise" keyword and you can define your own exception types as well.
+
+## Classes
+- Class is blue print for creating new objects.
+- Object is the instance of a class.
+- Naming convention for variables and functions - all lower case letters and seperate multiple words using underscore.
+- Naming convention for classes - Pascal naming convention. No use of underscore to seperate multiple words.
+- All functions in a class should have atleast one parameter and by convention it is called "self". "self" is the reference to current object.
+- __init__ is the magic method used to create constructor.
+- Objects in phyton are dynamic similar to javascript.
+- There are 2 kinds of attributes. 1) Class Attributes 2) Instance Attributes.
+- Instance attributes are the ones defined in constructor. They belong to instance or object of the class. Different objects can have different value for these attributes.
+- Class attributes are the ones defined in class level and they are shared or same between all instances of the class. We can read this through class reference or object reference.
+- There are 2 kinds of methods. 1) Class Methods 2) Instance Methods.
+- Instance Methods can be called only using instance of a class or object.
+- Class Method can be called directly from the class. These methods sometimes serves as factory method.
+- Magic Methods: These methods have 2 underscores in beginning and end of the name and these are called automatically by python interpreter as and when required. You can check the list of magic methods in this website https://rszalski.github.io/magicmethods/. You can override these magic methods as required. __int__ is the magic method called when you try create instance of class or otherwise called constructor. __str__ is the magic method called when you try convert object to string.
+- By default, equality operator in Python compares addresses or references between 2 objects.
+- An iterator object is an object that walks a container and gets one item at a time.
+- To make a attribute private or inaccessible from outside class, you need to prefix the attribute with double underscore __. Please note that you can still access this attribute from outside but this is just a convention to make it private or make it little bit harder for accessing it from outside. Python do not have concept of private members like in other programming languages like C#, Java.
+- Object is the base class for all classes in python.
+- Python supports multi level inheritance. It means a class can inherit from one class which can inherit from another class.
+- Python supports multiple inheritance which means a class can have multiple base classes.
+- Python provides Abstract Base Class which can declare common behavior method and contract for derived class to implement. 
+- We can implement polymorphism without even using abstract class or contract in Python. This is called duck typing. If it walks like a duck and quacks like a duck then it is a duck. No need of any contract or base class to prove that it is a duck. Because Python is a dynamically typed language.
+- If you have classes that have only data and no method or behavior then you can use namedtuple instead of class. They are called data classes. The equality operator on data classes check for equal values in data instead of memory address or references. The namedtuples are immutable.
