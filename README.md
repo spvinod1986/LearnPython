@@ -81,4 +81,15 @@
 - Predefined directories where python will look at to find the module can be found using sys.path.
 - A package is a container for one or more modules. Package is mapped to a directory and module is mapped to a file.
 - dir() is powerfukl built in function. With this function we can get list of attributes and methods defined in an object.
-- In python, you can execute module as script similar to immediately invoked function expressions in javascript
+- In python, you can execute module as script similar to immediately invoked function expressions in javascript.
+
+## Python Standard Library
+- Python comes with comprehensive packages and libraries which helps in building applications.
+- Paths/Directories: https://docs.python.org/3.4/library/pathlib.html
+- Path class from pathlib is the base class for working with paths. PosixPath is for mac/linux and WindowsPath is for windows.
+- Path library is useful for building path, create/remove/rename directories or files, read from file or write to file etc.
+- ZipFile class in zipfile module helps with methods to work with zip files(write, create)
+- csv module provides writer method to write to csv file and reader method to read all rows.
+- json module provides dumps methods to convert object to json and loads method to convert json to object.
+- time and datetime module provides with methods to work with timestamps and datetime respectively. timedelta module provides with methods to work with duration or time difference between 2 dates.
+- random module provides methods to generate random numbers.
