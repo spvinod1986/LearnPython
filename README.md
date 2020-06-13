@@ -93,3 +93,20 @@
 - json module provides dumps methods to convert object to json and loads method to convert json to object.
 - time and datetime module provides with methods to work with timestamps and datetime respectively. timedelta module provides with methods to work with duration or time difference between 2 dates.
 - random module provides methods to generate random numbers.
+
+## Python Package Index
+- Python Standard Library is comprehensive but it does not have everything that we need. Sometimes we may need features that are not implemented in Python Standard library. Pypi or Python Package Index is like npm(javascript) or nuget(microsoft) repository. It is repository of Python packages.
+- To install package from Pypi we should use a tool called pip(windows) or pip3(mac).
+- pip3 install xyz ~= 1.1.0
+- pip3 install xyz == 1.1.*
+- pip3 install xyz == 1.*
+- pip3 unisntall xyz
+- Virtual Environments: Pip installs packages globally which can be shared between projects. But different projects may have different versions of dependenciies. In that case we need to create isolated virtual environments for each application and install these dependencies inside those virtual isolated environments.
+- Pipenv: It is a tool which combines Pip and Virtual environment in to a single tool called Pipenv. It is a dependency manager for Python projects. It is equivalent to npm(javascript).
+- pipenv shell command will activate virtual environment for a project. To deactivate the virtual environment , type exit.
+- In your project, run pipenv install xyz
+- Pipenv will install virtual environment packages in a shared local folder outside the project to maintain the size of the project. This path can be found using the command pipenv --venv.
+- When you install a package using pipenv, 2 files will get automatically created. 1) Pipfile and 2) Pipfile.lock. These 2 projects are used to keep track of dependencies of our project and their versions.
+- PipFile includes 4 sections. 1) source is the address of the package repository from which packages are downloaded from. 2) dev-packages are the packages specific for development like automated testing. 3) packages which the application depend on. 4) requires specifies the version of python we need to run this application. If you don't specify version number , then pipfile will list the package with * version which means latest version.
+- PipFile.lock is the Json file which lists the dependencies of the application and their exact version. This helps in lift and shift scenario where you can take your application and put in another machine and the exact version of dependencies will be installed there. You can just move the application and run command "pipenv install" which will just look at dependencies in pipfile and install exact version of dependencies. Some case the packages in pipfile will specify latest version for packages with * if you do not specify the exact version during installation. In those cases if you want same version number in all machines then you can use command pipenv install --ignore-pipfile to ignore the pipfile and consider exact version in pipfile.lock.
+- We can use the command pipenv graph to view the list of all installed dependencies

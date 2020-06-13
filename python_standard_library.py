@@ -15,6 +15,8 @@ import smtplib  # to configure smtp server for email
 import sys  # to add command line arguments
 import subprocess  # to run other programs
 
+import requests
+
 # in windows
 Path(r"C:\ProgramFiles\Microsoft")
 # in mac or linux
@@ -38,3 +40,7 @@ with ZipFile("files.zip") as zip:
 
 path = Path("files.zip")
 path.unlink()
+
+# http requests
+response = requests.get("http://google.com")
+print(response)
